@@ -1,0 +1,92 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Star } from "lucide-react";
+
+export default function NutritionBookWebsite() {
+  return (
+    <div className="bg-white text-gray-800 font-sans">
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gradient-to-r from-yellow-100 to-orange-300">
+        <h1 className="text-5xl font-bold mb-4">100 Food Rules for CHILDREN UNDER 10</h1>
+        <p className="text-xl mb-6">A practical guide to raise healthy, happy eaters—one meal at a time</p>
+        <Button asChild className="text-lg px-6 py-3">
+          <a
+            href="https://www.amazon.com/100-Food-Rules-CHILDREN-UNDER-ebook/dp/B0DWKN2H8B"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy on Amazon
+          </a>
+        </Button>
+      </section>
+
+      {/* About the Book */}
+      <section className="px-6 py-16 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-4">About the Book</h2>
+        <p className="text-lg">
+          "100 Food Rules for CHILDREN UNDER 10" is a thoughtful, experience-driven guide for parents looking to foster
+          lifelong healthy eating habits in their children. Designed to be approachable and practical, this book offers
+          digestible rules backed by real-life parenting wisdom.
+        </p>
+      </section>
+
+      {/* What's Inside */}
+      <section className="bg-gray-100 py-16 px-6">
+        <h2 className="text-3xl font-semibold text-center mb-10">What You'll Discover</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {['Simple Family Rules', 'Common Mistakes to Avoid', 'Encouraging Healthy Choices'].map((item, index) => (
+            <Card key={index} className="rounded-2xl shadow-lg">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{item}</h3>
+                <p>Discover techniques to make {item.toLowerCase()} part of your child's everyday life.</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Author Bio */}
+      <section className="py-16 px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-4">About the Author</h2>
+        <p className="text-lg">
+          Drawing from both personal parenting experience and professional insights, the author delivers a warm,
+          insightful guide that feels like a conversation with a trusted friend.
+        </p>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-orange-50 py-16 px-6">
+        <h2 className="text-3xl font-semibold text-center mb-10">What Parents Are Saying</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {["This book transformed how we approach meals.", "Simple, honest, and truly helpful for busy parents."].map((quote, idx) => (
+            <Card key={idx} className="rounded-xl p-4 shadow">
+              <CardContent className="flex gap-4 items-start">
+                <Star className="text-yellow-500" />
+                <p className="italic">“{quote}”</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="text-center py-20 bg-gradient-to-r from-yellow-200 to-orange-400">
+        <h2 className="text-4xl font-bold mb-6">Empower Your Child’s Eating Habits Today</h2>
+        <Button asChild className="text-lg px-6 py-3">
+          <a
+            href="https://www.amazon.com/100-Food-Rules-CHILDREN-UNDER-ebook/dp/B0DWKN2H8B"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy on Amazon
+          </a>
+        </Button>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-sm text-gray-600 py-6">
+        &copy; 2025 100 Food Rules Publishing. All rights reserved.
+      </footer>
+    </div>
+  );
+}
